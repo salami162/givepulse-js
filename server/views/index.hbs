@@ -1,0 +1,76 @@
+{{#extend "stylesheets"}}
+{{/extend}}
+
+<div class="modal hide fade" id="login">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h2>Sign In</h2>
+  </div>
+  <div class="modal-body">
+		<table>
+			<tr>
+				<td>Email</td>
+				<td>
+					<input name="LoginForm[email]" id="LoginForm_email" type="text" placeholder="email@address.com">
+					<div class="errorMessage" id="LoginForm_email_em_" style="display:none"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td>
+		      <input name="LoginForm[password]" id="LoginForm_password" type="password" placeholder="password">            
+		      <div class="errorMessage" id="LoginForm_password_em_" style="display:none"></div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a href="/site/reset_password">Forgot Your Password?</a></td>
+			</tr>
+		</table>  
+	</div>
+  <div class="modal-footer">
+    <button class="btn btn-primary btn-large" type="submit">Sign In</button>
+  </div>
+</div>
+
+<div id="container">
+  <header>
+		<div id="loginlink">
+		 <a href="#login" data-toggle="modal" title="GivePulse Login">Have Access? Login</a>
+		</div>
+  </header>
+  
+  <div id="main" role="main">
+		<div class="gp_form">
+			<div class="tacenter">
+				<img src="images/givepulse_logo_v1.png" width="300px" style="margin: 20px auto 20px auto;" alt="GivePulse Logo: Cardboard box behind the word Give and the word Pulse"/>
+			</div>
+			
+			<div id="boundBox" class="loginbox tacenter">
+				<h3 class="tpadding mobile">
+					We Enable Volunteers to Change the World
+				</h3>
+				<div id="labelenter" class="mobile">
+					<em>Signup now so you may get early access and updates:</em>
+				</div>	
+				<div class="barWrap">
+				</div>
+			</div>
+			<div class="social" style="text-align:center;">
+	          
+	    <!--facebook like button-->
+			<a href="http://www.facebook.com/pages/GivePulse/304768136237980" class="facebook" title="GivePulse Facebook Page: Like Us!" target="_blank">facebook</a> &nbsp;	
+			<!--end of fb work-->
+			<!-- twitter start-->
+			<a href="https://twitter.com/givepulse"  class="twitter" title="GivePulse Twitter Page: Follow us!" target="_blank">twitter</a>
+			<!-- twitter end-->
+			
+			</div>
+		</div>
+  </div>
+</div> 
+
+{{#extend "scripts"}}
+<script src="../scripts/jquery.emailfy.js"></script>
+<script src="../scripts/index.js"></script>
+{{/extend}}

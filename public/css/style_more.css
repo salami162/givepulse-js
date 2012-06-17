@@ -1,0 +1,370 @@
+/* 
+    Document   : mobile_style_signup.css
+    Created on : May 23, 2012, 5:54:15 PM
+    Author     : georgeluc
+    Description:
+        consolidates all the styles for the front registration page
+*/
+
+
+/*styles for 800px and up!*/
+@media only screen and (min-width: 800px) {
+  /* Styles */
+}/*/mediaquery*/
+
+
+/* iPhone 4, Opera Mobile 11 and other high pixel ratio devices ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}
+/*optimizing the registration page for mobile device*/
+
+input[type=text],
+input[type=password],
+textarea {
+	width: 40%;
+	padding: 0 2%;
+	font-size: 16px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin: 0 1% 0 0;
+	border: 1px solid #434343;
+	background: rgba(0,0,0,0.6);
+	color: white;
+}
+
+/*.mobile {
+    width: 40%;
+    margin: auto;
+}*/
+
+/*previously from style_signup.css */
+
+a:link { color: #c2c2c2; text-decoration: underline; }
+a:visited { color: #c2c2c2; }
+a:hover, a:active { color: white; }
+
+
+
+#background {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+}
+
+#layout {
+	width: 1000px;
+	margin: 0px auto;
+}
+
+
+
+#header {
+	position: relative;
+	height: 132px;
+	overflow: hidden;
+	width:1000px;
+	margin:0 auto;
+}
+
+#logo a {
+	float: left;
+	display: block;
+	width: 247px;
+	height: 132px;
+	margin: 0px;
+	text-decoration: none;
+}
+
+.home.page #topnav {
+	display:none;
+}
+
+
+
+#contactform {
+	margin-top: -15px;
+	padding: 15px 0 15px 18px;
+	border: 1px solid #565656;
+	border-radius: 2px;
+	background: rgba(0,0,0,0.5)
+}
+
+#contactform  label {
+	width: 188px;
+	padding: 0 18px 10px 0;
+	float: left;
+	clear: none;
+	color:#e9e9e9;
+}
+
+#contactform  label.full {
+	width: 400px;
+	float: none;
+	clear: both;
+}
+
+#contactform textarea {
+	height: 100px;
+}
+
+#contactform br {
+	display: none;
+}
+
+#contactform .buttoncontainer {
+	text-align: right;
+	margin: 0;
+}
+
+#contactform p {
+	margin: 0;
+}
+
+.wpcf7-response-output {
+	margin-top: 5px !important;
+}
+
+#boundBox .loginbox {
+	background: url(images/bgbox.png) repeat;
+	border: 1px solid rgba(90,90,90,0.7);
+	padding: 0;
+	position: relative;
+	margin: 0 auto 40px auto;
+	width: 396px;
+	height: auto;
+	min-height: 380px;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+	border-radius:4px;
+}
+
+
+
+#social-links {margin-left:40px;}
+#social-links div {float:left; margin:0 5px;}
+#social-links div.fbrecommend {width:110px; overflow:hidden;}
+
+
+
+fieldset {
+	border: none;
+	padding: 5px 0;
+	margin: 0;
+	display: block;
+	clear: both;
+}
+label {
+	display: block;
+	font-size: 16px;
+	padding: 0 0 2px 0;
+	line-height: 30px;
+}
+input[type=text],
+input[type=password],
+textarea {
+	width: 60%;
+	padding: 0 2%;
+	font-size: 16px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin: 0 1% 0 0;
+	border: 1px solid #434343;
+	background: rgba(0,0,0,0.6);
+	color: white;
+}
+
+/*GivePulse Font*/
+@font-face {
+  font-family: 'Lemon';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lemon Regular'), local('Lemon-Regular'), url('l0fJcP4L58UzH_xdgIUVUqCWcynf_cDxXwCLxiixG1c.woff') format('woff');
+}
+
+label.inside {
+    display: none;
+}
+
+input#email {
+    background: transparent url(../images/email_dk.png) 10px 12px no-repeat;
+    padding: 10px 10px 10px 40px;
+    /*color: #333;*/
+    font-size: 1.3em;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    height: 24px;
+    vertical-align: middle;
+    /*
+    margin-right: 2px;
+    text-shadow: #fff 0 1px 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0);
+    */
+}
+
+#labelenter {
+	font-size: 15px;
+	line-height: 1.3;
+	font-family: 'Helvetica Neue','Helvetica Neue',Helvetica,Arial,Sans-Serif;
+  color: gray;
+  margin-top: 30px;
+}
+
+#loginlink {
+	text-align: right;	
+	margin-right: 15px;
+}
+
+.contactWrap A:hover {
+text-decoration: underline;
+}
+.brand {
+	color: white;
+	font-family: 'Lemon',cursive,helvetica,arial,sans-serif;
+}
+
+.webPitch {
+	color: #666;
+}
+
+.signupTxt {
+	color: #666;
+}
+
+body {
+	font-size: 75%;
+	background: #242424 /*url(images/cardboard_v2.jpg)*/ no-repeat top center fixed;
+	color: #c2c2c2;
+	margin: 0;
+	font-size: 14px;
+	font-family: 'MuseoSans500', "Trebuchet MS", Trebuchet, arial, sans-serif;
+	       -o-background-size: cover;
+	       -moz-background-size: cover;
+	       -webkit-background-size: cover;
+	       background-size: cover;
+	       background-position: center top;
+}
+
+.tpadding {
+	padding-top: 1em;
+	font-size: 16px;
+	margin: 12px;
+}
+
+.valigncenter {
+	vertical-align: center;	
+}
+
+.tacenter {
+	text-align: center;	
+}
+
+
+.bold {
+	font-weight:bold;	
+}
+
+#boundBox.loginbox {
+	border: 1px solid rgba(90,90,90,0.7);
+	padding: 0;
+	position: relative;
+	margin: 0 auto 10px auto;
+	width: 450px; /*specifically this value is changed */
+	height: auto;
+	min-height: 200px;
+	box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+	border-radius:4px;
+}
+.newsletterButton {
+	display: inline-block;
+	width: 45px;
+	height: 39px;
+	line-height: 35px;
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5);
+	background: #d5ecbe;
+	background: -moz-linear-gradient(top, #d5ecbe 0%, #96d05c 3%, #84c841 49%, #79c32f 51%, #79c32f 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d5ecbe), color-stop(3%,#96d05c), color-stop(49%,#84c841), color-stop(51%,#79c32f), color-stop(100%,#79c32f));
+	background: -webkit-linear-gradient(top, #d5ecbe 0%,#96d05c 3%,#84c841 49%,#79c32f 51%,#79c32f 100%);
+	background: -o-linear-gradient(top, #d5ecbe 0%,#96d05c 3%,#84c841 49%,#79c32f 51%,#79c32f 100%);
+	background: -ms-linear-gradient(top, #d5ecbe 0%,#96d05c 3%,#84c841 49%,#79c32f 51%,#79c32f 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5ecbe', endColorstr='#79c32f',GradientType=0 );
+	background: linear-gradient(top, #d5ecbe 0%,#96d05c 3%,#84c841 49%,#79c32f 51%,#79c32f 100%);
+	cursor: pointer;
+	border: 2px solid #000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	font-weight: bold;
+}
+
+/* login modal */
+div#login h2 {
+	color: #000000;
+}
+
+div#login table {
+	margin-left: 80px;
+}
+
+div#login table td{
+	text-align: right;
+	vertical-align: middle;
+	padding: 10px;
+	color: #000000;
+}
+
+div#login a {
+  color: #0069D6;
+  font-weight: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+div#login a:hover {
+	color: #004381;
+	text-decoration: underline;
+}
+
+div#login input {
+	background: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px 3px 3px 3px;
+  color: #808080;
+  display: inline-block;
+  font-size: 13px;
+  height: 18px;
+  line-height: 18px;
+  padding: 4px;
+  width: 210px;
+}	
+}
+/* Turning this off since I don't think it looks really good with just the two icons*/
+/*
+.social a{
+	background: url(../images/register_sprite.png) no-repeat;
+	overflow:hidden;
+	display: inline-block;
+}
+
+a.facebook, a.twitter{
+	margin: auto;
+	height: 27px;
+	width: 28px;
+}
+
+a.facebook {
+	background-position: 0 0;	
+}
+
+a.twitter{
+	background-position: -30px 0;
+}
+*/
