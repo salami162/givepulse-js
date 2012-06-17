@@ -1,0 +1,56 @@
+*.sassc
+*.scssc
+static/Gemfile.lock
+static/build/*
+static/dev/styl/screen.styl
+static/dev/stylesheets/*.css
+static/dev/stylesheets/*/*.css
+static/dev/stylesheets/*/*/*.css
+.monitor
+dist/
+
+# As a courtesy ignore the old config file
+config/firebird-local.conf
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+*.iml
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+nbproject
+Thumbs.db
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# Komodo
+*.komodoproject
+.komodotools
+
+# Folders to ignore
+.hg
+.svn
+intermediate
+publish
+.idea
+
+# node-cover
+.coverage_data
+.coverage_debug
+cover_html
+
+.vagrant
