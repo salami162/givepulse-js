@@ -19,21 +19,18 @@ function jsonpcallback(data) {
 } */
 
 require(['env',
-//  'jquery',
-//  'underscore',
-//  'backbone',
-  'view/opportunity',
   'model/opportunity',
   'collection/opportunities',
+  'view/opportunity',
   'gperror',
 //  'hbs!template/container'
-], function ( env, opportunityView, opportunityModel, opportunityCollection, gpError/*, containerTmpl*/) {
+], function ( env, opportunityModel, opportunityCollection, opportunityView, gpError) {
   
   var dataError = gpError.dataError;
  
   //set initial state
   var $dfd = $.ajax({
-		dataType: 'jsonp', 
+		dataType: 'jsonp',  // use JSONP to implement cross domain request
 //    jsonp : "callback",
 //    jsonpCallback: "jsonpcallback",
     url : 'http://127.0.0.1:1234/api/opportunities'
@@ -55,12 +52,9 @@ require(['env',
 	    model: env
 	  });
 
-//    document.getElementsByTagName('body')[0].innerHTML = containerTmpl(env.toJSON());
-
     mainView.render();
   });
 
   $dfd.fail(dataError);
-
 
 });
