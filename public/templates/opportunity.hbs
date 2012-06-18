@@ -1,11 +1,11 @@
-<table>
+<table class="givepulse-opportunities">
 {{#each opportunities}}
-	<tr>
+	<tr data-opp-name="{{name}}" class="givepulse-opportunity-name">
 		<td>{{name}}</td>
-		<td><button>register</button></td>
+		<td><button class="givepulse-register-btn">register</button></td>
 	</tr>
-	<tr>
-		<td colspan="2">{{description}}</td>
+	<tr class="givepulse-opportunity-desc">
+		<td colspan="2" >{{description}}</td>
 	</tr>
 {{/each}}
 </table>
