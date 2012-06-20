@@ -6,7 +6,7 @@ define([
 	
 	return Backbone.Model.extend({
     initialize : function () {
-    	console.log('user model initialized')
+    	console.log('user model initialized');
     }
 	});
 	

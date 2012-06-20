@@ -19,16 +19,42 @@ function jsonpcallback(data) {
 } */
 
 require(['env',
+	'model/user',
+	'model/orgnization',
   'model/opportunity',
   'collection/opportunities',
+  'view/container',
   'view/opportunity',
-  'gperror',
-//  'hbs!template/container'
-], function ( env, opportunityModel, opportunityCollection, opportunityView, gpError) {
+  'gperror'
+], function (env, OrgnizationModel, UserModel, OpportunityModel, OpportunityCollection, ContainerView, OpportunityView, gpError) {
   
   var dataError = gpError.dataError;
+  
+  var client = new OrgnizationModel({
+  	name : 'Goodwill',
+  	id : '23',
+  	urlRoot : 'http://127.0.0.1:1234/api/orgnizations/23',
+  	opportunities : new OpportunityCollection({	url: 'http://127.0.0.1:1234/api/opportunities' })
+  })
+   	
+ 	var user = new UserModel({isAuthenticated : false});
+ 	
+ 	env.set({
+ 		loginUser : user,
+ 		orgnization: client
+ 	});
+ 	
+  var mainView = new ContainerView({
+  	el : $('.givepulse-container'),
+  	model : client
+  });
+    
+/* 	env.fetch ({
+		dataType: 'jsonp',  // use JSONP to implement cross domain request
+    url : 'http://127.0.0.1:1234/api/opportunities'
+ 	});*/
  
-  //set initial state
+  // Request a list of all the opportunities
   var $dfd = $.ajax({
 		dataType: 'jsonp',  // use JSONP to implement cross domain request
 //    jsonp : "callback",
@@ -36,6 +62,7 @@ require(['env',
     url : 'http://127.0.0.1:1234/api/opportunities'
   });
 
+	// 
   $dfd.success(function (resp) {
     if (resp.error) {
       return dataError(resp.error_msg);
@@ -43,15 +70,10 @@ require(['env',
 
     var data = resp.data;
     console.log('data', data);
+	  	  
+	  client.get('opportunities').reset( OpportunityCollection.normalize(data) );
+  	mainView.oppView.collection = client.get('opportunities');
 	  
-	  var allOpportunities = new opportunityCollection( opportunityCollection.normalize(data));
-	  
-	  var mainView = new opportunityView({
-	    el : $('.givepulse-container'),
-	    collection : allOpportunities,
-	    model: env
-	  });
-
     mainView.render();
   });
 
