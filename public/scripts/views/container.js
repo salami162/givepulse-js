@@ -1,10 +1,10 @@
 define([
 	'backbone',
 	'view/opportunity',
+	'view/authentication',
 	'hbs!template/container'
-], function (Backbone, OpportunityView, tmplHtml) {
+], function (Backbone, OpportunityView, AuthenticationView, tmplHtml) {
 	
-	console.log('loading container view');
   return Backbone.View.extend({
   	
     name : "givepulse",
@@ -15,13 +15,22 @@ define([
 
     initialize : function () {
       this.template = tmplHtml;
-      var html = this.template({});
-      this.$el.html( html );
-      this.oppView = new OpportunityView({el : this.$el.find('.gp-opportunity-content')});
     },
 
     render : function () {
-      this.oppView.render();      
+      var html = this.template({});
+      this.$el.html( html );
+    },
+    
+    initSubviews : function () {
+      this.oppsView = new OpportunityView({
+      	el : this.$('.gp-opportunity-content'),
+      	collection : this.model.get('opportunities')
+     	});
+     	this.authView = new AuthenticationView({
+     		el : this.$('.gp-register-content'),
+     		model : this.model.get('loginUser')
+     	});
     }
     
   });

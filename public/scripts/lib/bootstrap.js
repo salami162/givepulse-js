@@ -16,8 +16,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================== */
-
-
+define(['jquery'], function ($) {
+	
+console.log('require bootstrap');
 !function ($) {
 
   $(function () {
@@ -1823,3 +1824,6 @@
   })
 
 }(window.jQuery);
+
+	return $;
+});

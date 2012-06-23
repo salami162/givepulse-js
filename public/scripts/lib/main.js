@@ -19,36 +19,41 @@ function jsonpcallback(data) {
 } */
 
 require(['env',
-	'model/user',
-	'model/orgnization',
+	'model/authentication',
+	'model/organization',
   'model/opportunity',
   'collection/opportunities',
   'view/container',
-  'view/opportunity',
   'gperror'
-], function (env, OrgnizationModel, UserModel, OpportunityModel, OpportunityCollection, ContainerView, OpportunityView, gpError) {
+], function (env, AuthenticateModel, OrgnizationModel, OpportunityModel, OpportunityCollection, ContainerView, gpError) {
   
   var dataError = gpError.dataError;
   
   var client = new OrgnizationModel({
   	name : 'Goodwill',
   	id : '23',
-  	urlRoot : 'http://127.0.0.1:1234/api/orgnizations/23',
-  	opportunities : new OpportunityCollection({	url: 'http://127.0.0.1:1234/api/opportunities' })
-  })
+  	url : 'http://127.0.0.1:1234/api/organizations/23'
+  });
    	
- 	var user = new UserModel({isAuthenticated : false});
+ 	var user = new AuthenticateModel({isAuthenticated : false});
+ 	
+ 	var opportunities = new OpportunityCollection ({
+  	urlRoot: client.url + 'opportunities'
+ 	});
  	
  	env.set({
  		loginUser : user,
- 		orgnization: client
+ 		orgnization : client,
+ 		opportunities : opportunities
  	});
  	
   var mainView = new ContainerView({
   	el : $('.givepulse-container'),
-  	model : client
+  	model : env
   });
-    
+  mainView.render();
+  mainView.initSubviews();
+  
 /* 	env.fetch ({
 		dataType: 'jsonp',  // use JSONP to implement cross domain request
     url : 'http://127.0.0.1:1234/api/opportunities'
@@ -71,10 +76,7 @@ require(['env',
     var data = resp.data;
     console.log('data', data);
 	  	  
-	  client.get('opportunities').reset( OpportunityCollection.normalize(data) );
-  	mainView.oppView.collection = client.get('opportunities');
-	  
-    mainView.render();
+	  env.get('opportunities').reset( OpportunityCollection.normalize(data) );
   });
 
   $dfd.fail(dataError);

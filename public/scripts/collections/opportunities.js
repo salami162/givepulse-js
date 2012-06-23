@@ -3,8 +3,6 @@ define([
 	'model/opportunity'
 ], function(Backbone, opportunity) {
 	
-	console.log("loading opportunity collection");
-  
   var res = Backbone.Collection.extend({
       model : opportunity
     });	

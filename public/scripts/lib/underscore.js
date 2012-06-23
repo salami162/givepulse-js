@@ -1063,6 +1063,5 @@
       return _;
     });
   }
-	console.log('underscore loaded');
 
 }).call(this);
