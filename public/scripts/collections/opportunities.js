@@ -15,7 +15,6 @@ define([
     	var oppModel = new opportunity(opp);
       opportunities.push(oppModel);
     }
-		console.log('normalize = ', opportunities);
     return opportunities;
   };
   

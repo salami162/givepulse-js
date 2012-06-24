@@ -43,5 +43,33 @@ exports.routes = function (prefix, app) {
       data : opportunities
     });
   });
+  
+  app.post('/session', function(req, res) {
+    res.json({
+      error : false,
+      data : {
+      	name : 'Limin',
+      	email : 'limin.shen@hotmail.com',
+      	isAuthenticated : true,
+      	opportunity : req.body.opportunity,
+      	checkedIn : true
+      }
+    });
+
+  app.post('/signup', function(req, res) {
+    res.json({
+      error : false,
+      data : {
+      	name : 'Limin',
+      	email : 'limin.shen@hotmail.com',
+      	isAuthenticated : true,
+      	opportunity : req.body.opportunity,
+      	checkedIn : true
+      }
+    });
+
+
+
+  })
 
 }

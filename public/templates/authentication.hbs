@@ -1,33 +1,84 @@
   
   <div class="gp-register modal-header">
     <button type="button" class="close" data-dismiss="modal">×</button>
-    <h2>Sign In</h2>
+    <h2>Register with GivePulse</h2>
   </div>
 
 	<div class="gp-register modal-body">
-		<table>
-			<tr>
-				<td>Email</td>
-				<td>
-					<input type="text" placeholder="email@address.com">
-					<div class="gp-register errorMessage" style="display:none"></div>
-				</td>
-			</tr>
-			<tr>
-				<td>Password</td>
-				<td>
-		      <input type="password" placeholder="password">            
-		      <div class="gp-register errorMessage" style="display:none"></div>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><a href="/site/reset_password">Forgot Your Password?</a></td>
-			</tr>
-		</table>  
-	</div>
+		<!-- Sign In form -->
+		<div class="gp-front-signin">
+<!--			<form action="http://www.givepulse.com/sessions" class="gp-signin" method="post"> -->
+				<!-- username -->
+				<div class="gp-placeholding-input gp-username">
+					<input class="gp-text-input gp-email-input" type="text" title="Username or email">
+					<span class="gp-placeholder">Username or email</span>
+				</div>
+				<!-- password -->
+				<table class="gp-flex-table password-signin">
+					<tbody>
+					<tr>
+						<td class="gp-flex-table-primary">
+							<div class="gp-placeholding-input gp-password gp-flex-table-form">
+								<input class="gp-text-input gp-flex-table-input gp-password-input" type="password" title="Password">
+								<span class="gp-placeholder">Password</span>
+							</div>
+						</td>
+						<td class="gp-flex-table-secondary">
+							<button class="btn btn-primary gp-flex-table-btn gp-signin-btn" tabindex="0">Sign in</button>
+						</td>
+					</tr>
+					</tbody>
+				</table>				
+				<!-- forget password -->
+				<div class="gp-remember-forgot">
+					<a class="gp-forgot" href="/account/resend_password">Forgot password?</a>
+				</div>
+				<!-- hidden inputs -->
+				<input type="hidden" value="{{opportunity}}" class="gp-opportunity">
+				<input type="hidden" value="true" name="return_to_ssl">
+				<input type="hidden" value="" name="redirect_after_login">
+				<input type="hidden" name="authenticity_token" value="916a5e260b1282e163225934c92b9b7306d5f64c">			
+				
+<!--			</form> -->
+		</div>
+		
+		<div class="gp-divider">Or</div>
+
+		<!-- Sign Up form -->
+		<div class="gp-front-signup">
+      <h3><strong>New to GivePulse?</strong> Sign up</h3>
+
+<!--      <form action="http://www.givepulse.com/signup" class="gp-signup" method="post"> -->
+        <!-- first name -->
+        <div class="gp-placeholding-input">
+          <input class="gp-text-input gp-firstname-input" maxlength="20" type="text">
+          <span class="gp-placeholder">First name</span>
+        </div>
+        <!-- last name -->
+        <div class="gp-placeholding-input">
+          <input class="gp-text-input gp-lastname-input" maxlength="20" type="text">
+          <span class="gp-placeholder">Last name</span>
+        </div>
+        <!-- email -->
+        <div class="gp-placeholding-input">
+          <input class="gp-text-input gp-email-input" type="text">
+          <span class="gp-placeholder">Email</span>
+        </div>
+        <!-- password -->
+        <div class="gp-placeholding-input">
+          <input class="gp-text-input gp-password-input" type="password">
+          <span class="gp-placeholder">Password</span>
+        </div>
+
+				<!-- hidden inputs -->
+				<input type="hidden" value="{{opportunity}}" class="gp-opportunity">
+        <input type="hidden" value="front" name="context" >
+        <input type="hidden" value="916a5e260b1282e163225934c92b9b7306d5f64c" name="authenticity_token" >
+        <button class="btn btn-success gp-signup-btn">
+          Sign up for GivePulse
+        </button>
+<!--      </form> -->
+		</div>              		
 	
-	<div class="gp-register modal-footer">
-	  <button class="gp-register btn btn-primary btn-large" type="submit">Sign In</button>
 	</div>
 

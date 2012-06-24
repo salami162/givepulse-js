@@ -1,0 +1,167 @@
+.gp-register-content {
+	background: none repeat scroll 0 0 padding-box #E4E4E4;
+	width : 340px;
+}
+.gp-register-content h2{
+	color : #BA084B;
+	text-align: center;
+}
+
+.gp-register-content .gp-front-signin, 
+.gp-register-content .gp-front-signup {
+background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #D1D1D1;
+    border-style: solid;
+    border-width: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.gp-register-content .gp-front-signin {
+		height: 108px;
+}
+.gp-register-content .gp-front-signin, 
+.gp-register-content .gp-front-signup {
+		width: 300px;
+}
+.gp-register-content .gp-placeholding-input {
+    display: block;
+    height: 30px;
+    height: 30px;
+    overflow: visible;
+    position: relative;
+}
+.gp-register-content .gp-front-signin .gp-username {
+    left: 12px;
+    top: 12px;
+    position: relative;
+    width: 276px;
+}
+.gp-register-content .gp-text-input {
+    width: 266px;
+    height: 20px;
+}
+
+.gp-register-content .gp-front-signin .password-signin {
+    position: relative;
+    margin-left: 11px;
+    margin-top: 16px;
+    width: 276px;
+}
+.gp-register-content .gp-front-signin .gp-password {
+    width: 100%;
+}
+.gp-register-content .gp-front-signin .gp-password .gp-text-input {
+    height: 30px;
+}
+.gp-register-content .gp-front-signin .submit {
+    box-shadow: 0 1px 0 #FFFFFF;
+    height: 30px;
+}
+.gp-register-content .gp-placeholding-input .gp-placeholder {
+    -moz-transition: opacity 0.1s ease 0s, font-size 0.1s ease 0s;
+    -moz-user-select: none;
+    bottom: 1px;
+    color: #999999;
+    cursor: text;
+    font-size: 13px;
+    height: 18px;
+    left: 2px;
+    line-height: 18px;
+    padding: 4px;
+    position: absolute;
+    right: 1px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    top: 1px;
+    white-space: nowrap;
+    z-index: 1;
+}
+.gp-register-content .gp-placeholding-input input:focus + .gp-placeholder {
+    opacity: 0.6;
+}
+
+.gp-register-content .gp-flex-table {
+    width: 100%;
+}
+.gp-register-content .gp-flex-table-primary, .gp-flex-table-secondary {
+    vertical-align: top;
+}
+.gp-register-content .gp-flex-table-primary {
+    padding-right: 5px;
+    width: 99%;
+}
+.gp-register-content .gp-flex-table-secondary {
+    max-width: 1%;
+    width: 1%;
+}
+.gp-register-content .gp-flex-table-form {
+    float: left;
+    width: 100%;
+}
+.gp-register-content .gp-flex-table-input {
+    -moz-box-sizing: border-box;
+    display: block;
+    height: 30px;
+    line-height: normal;
+    width: 100%;
+}
+.gp-register-content .gp-flex-table-btn {
+    float: right;
+    white-space: nowrap;
+    width: auto;
+}
+.gp-register-content .gp-front-signin .gp-remember-forgot {
+    position: relative;
+    left: 12px;
+    width: 276px;
+}
+.gp-register-content .gp-front-signin .gp-remember, .gp-front-signin .gp-forgot, .gp-front-signin .gp-separator {
+    display: inline;
+    font-size: 11px;
+    line-height: 13px;
+    margin: 2px;
+    position : absolute;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.gp-register-content .gp-divider {
+    color: #AAAAAA;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    width: 300px;
+    margin: 5px 0px;
+}
+
+.gp-register-content .gp-front-signup h3 {
+    border-bottom: 1px solid #E2E2E2;
+    box-shadow: 0 1px 0 #FFFFFF;
+    color: #777777;
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    position: relative;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.gp-register-content .gp-front-signup h3 strong {
+    color: #333333;
+    font-weight: 500;
+}
+.gp-register-content .gp-front-signup .gp-placeholding-input {
+		left:12px;
+		margin:5px 0px;
+}
+.gp-register-content .gp-front-signup .gp-text-input {
+    width: 266px;
+}
+.gp-register-content .gp-front-signup .btn {
+    bottom: 12px;
+    box-shadow: 0 1px 0 #FFFFFF;
+    height: 30px;
+    margin: 5px 0px 12px 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+}

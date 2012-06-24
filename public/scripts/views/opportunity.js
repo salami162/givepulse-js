@@ -26,14 +26,15 @@ define([
     },
         
     registerOpportunity : function (e) {
+    	var tr = $(e.target).parents('tr')[0];
+    	var oppName = $(tr).attr('data-opp-name');
+    	console.log('opportunity : ', oppName);
+
     	var loginUser = env.get('loginUser');
     	if (!loginUser.get('isAuthenticated')) {
-    		loginUser.trigger('authRequired');
+    		loginUser.trigger('authRequired', oppName);
     	}
     	else {
-	    	var tr = $(e.target).parents('tr')[0];
-	    	var oppName = $(tr).attr('data-opp-name');
-	    	console.log('opportunity : ', oppName);
     	}
     	return false;
     }

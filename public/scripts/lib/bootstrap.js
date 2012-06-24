@@ -18,7 +18,6 @@
  * ========================================================== */
 define(['jquery'], function ($) {
 	
-console.log('require bootstrap');
 !function ($) {
 
   $(function () {
