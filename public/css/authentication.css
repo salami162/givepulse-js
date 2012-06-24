@@ -7,6 +7,21 @@
 	text-align: center;
 }
 
+.gp-register-content .modal-body {
+	max-height: 450px;
+}
+
+.gp-register-content .gp-fblogin {
+	background-image:url('../images/gp-fb-login.png');
+	background-repeat:no-repeat;
+	background-position: center center;
+	display: block;
+	margin-bottom: 5px;
+	margin-top: -5px;
+	height: 29px;
+	width : 300px;
+}
+
 .gp-register-content .gp-front-signin, 
 .gp-register-content .gp-front-signup {
 background: none repeat scroll 0 0 #FFFFFF;
