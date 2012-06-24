@@ -55,6 +55,7 @@ exports.routes = function (prefix, app) {
       	checkedIn : true
       }
     });
+  });
 
   app.post('/signup', function(req, res) {
     res.json({
@@ -67,9 +68,18 @@ exports.routes = function (prefix, app) {
       	checkedIn : true
       }
     });
-
-
-
-  })
+	});
+	
+  app.post('/impact', function(req, res) {
+    res.json({
+      error : false,
+      data : {
+      	name : req.body.loginUser.name,
+      	email : req.body.loginUser.email,
+      	opportunity : req.body.opportunity,
+      	checkedIn : true
+      }
+    });
+  });
 
 }

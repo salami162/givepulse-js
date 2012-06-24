@@ -21,6 +21,8 @@ define([
       this.template = tmplHtml;
       if (this.model) {
       	this.model.on('authRequired', this.showModal, this);
+      	this.model.on('signInSucceed', this.hideModal, this);
+      	this.model.on('signUpSucceed', this.hideModal, this);
       }
     },
 
@@ -32,6 +34,10 @@ define([
     showModal : function (opp) {
     	this.render({opportunity : opp});
     	this.$el.modal('show');
+    },
+    
+    hideModal : function () {
+    	this.$el.modal('hide');
     },
     
     focusTextInput : function(e) {
@@ -54,9 +60,7 @@ define([
 				password : $('.gp-front-signin .gp-password-input').val(),
 				opportunity : $('.gp-front-signin .gp-opportunity').val()
 			}; 
-	   	self.model.signIn(args, function() {
-	   		self.$el.modal('hide');
-	   	});
+	   	self.model.signIn(args);
 	   	return false;
     },
     
@@ -69,9 +73,7 @@ define([
 				password : $('.gp-front-signup .gp-password-input').val(),
 				opportunity : $('.gp-front-signup .gp-opportunity').val()
 			}; 
-	   	self.model.signUp(args, function() {
-	   		self.$el.modal('hide');
-	   	});
+	   	self.model.signUp(args);
 	   	return false;
     },
     
