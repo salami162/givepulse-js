@@ -1,6 +1,6 @@
 // npm
 const express = require('express');
-//const hbs = require('hbs');
+const hbs = require('hbs');
 const _ = require('underscore');
 
 var app = express.createServer();
@@ -20,7 +20,7 @@ var api = require('./server/routes/api');
 
 
 // setup view engine
-/*express.view.register('.hbs', hbs);
+express.view.register('.hbs', hbs);
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'hbs');
 var blocks = {};
@@ -41,7 +41,7 @@ hbs.registerHelper('block', function(name) {
   blocks[name] = [];
   return val;
 });
-*/
+
 // session support
 app.use(express.cookieParser());
 app.use(express.session({ secret: "ontheside" }));
